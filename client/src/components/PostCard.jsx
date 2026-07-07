@@ -13,7 +13,7 @@ function PostCard({ post }) {
     >
       {post.image && (
         <img
-          src={`http://localhost:5000/uploads/${post.image}`}
+        src={`https://education-blog-mnil.onrender.com/uploads/${post.image}`}
           alt={post.title}
           style={{
             width: "100%",
