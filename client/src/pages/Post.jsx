@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
+import CommentSection from "../components/CommentSection";
 import { useParams, Link } from "react-router-dom";
 import API from "../api/api";
+
 
 function Post() {
   const { id } = useParams();
@@ -16,6 +18,7 @@ function Post() {
   const fetchPost = async () => {
     try {
       const res = await API.get(`/posts/${id}`);
+
       setPost(res.data);
       setLikes(res.data.likes);
     } catch (err) {
@@ -96,13 +99,12 @@ function Post() {
             marginBottom: "30px",
           }}
         >
-          Published on{" "}
-          {new Date(post.createdAt).toLocaleDateString()}
+          Published on {new Date(post.createdAt).toLocaleDateString()}
         </p>
 
         {post.image && (
           <img
-          src={`https://education-blog-mnil.onrender.com/uploads/${post.image}`}
+            src={`https://education-blog-mnil.onrender.com/uploads/${post.image}`}
             alt={post.title}
             style={{
               width: "100%",
@@ -141,6 +143,8 @@ function Post() {
         >
           👍 Like ({likes})
         </button>
+
+        <CommentSection postId={id} />
 
         <hr
           style={{
