@@ -123,21 +123,44 @@ function Home() {
           background: "#111827",
           color: "#fff",
           textAlign: "center",
-          padding: "40px",
+          padding: "40px 20px",
         }}
       >
-        <h2>EduNews Nigeria</h2>
+        <h2
+          style={{
+            marginBottom: "10px",
+          }}
+        >
+          EduNews Nigeria
+        </h2>
 
-        <p>
-          Developed by Qudus Olaoluwa
+        <p
+          style={{
+            margin: "6px 0",
+            fontSize: "17px",
+            fontWeight: "600",
+          }}
+        >
+          Basira Dabiri
         </p>
 
-        <p>
-          Department of Computer Science
+        <p
+          style={{
+            margin: "6px 0",
+            color: "#d1d5db",
+          }}
+        >
+          ADSU EduNews
         </p>
 
-        <p>
-          Final Year Project 2026
+        <p
+          style={{
+            marginTop: "15px",
+            color: "#9ca3af",
+            fontSize: "14px",
+          }}
+        >
+          © 2026 All Rights Reserved
         </p>
       </footer>
     </>
@@ -145,3 +168,4 @@ function Home() {
 }
 
 export default Home;
+
